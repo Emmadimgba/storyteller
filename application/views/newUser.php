@@ -32,29 +32,34 @@
                <div class="alert alert-danger" role="alert" id="infoMessage"><?php echo $message;?></div>
                 <?php } ?>
               <h4>Hello! let's get started</h4>
-              <h6 class="font-weight-light">Sign in to continue.</h6>
-              <form class="pt-3" method="post" action="<?php echo base_url() ?>auth/login">
-                <div class="form-group">
-                  <input type="email" name="identity" class="form-control form-control-lg" id="exampleInputEmail1" placeholder="Username">
-                </div>
-                <div class="form-group">
-                  <input type="password" name="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <div class="mt-3">
-                    <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">SIGN IN</button>
-                </div>
-                <div class="my-2 d-flex justify-content-between align-items-center">
-                  <div class="form-check">
-                    <label class="form-check-label text-muted">
-                      <input name="remember" id-="remember" type="checkbox" class="form-check-input">
-                      Keep me signed in
-                    </label>
-                  </div>
-                </div>
-                <div class="text-center mt-4 font-weight-light">
-                  Don't have an account? <a href="<?php echo base_url()?>home/create_user" class="text-primary">Create</a>
-                </div>
-              </form>
+              <h6 class="font-weight-light">Register</h6>
+<form method="post" action="<?php echo base_url(); ?>home/create_user" class="forms-sample">
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">First Name</label>
+                      <input type="text" name="first_name"  class="form-control" id="exampleInputUsername1" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Last Name</label>
+                      <input type="text" name="last_name"  class="form-control" id="exampleInputUsername1" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Phone</label>
+                      <input type="text" name="phone"  class="form-control" id="exampleInputUsername1" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Email address</label>
+                      <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputConfirmPassword1">Confirm Password</label>
+                      <input type="password" name="password_confirm" class="form-control" id="exampleInputConfirmPassword1" placeholder="Password">
+                    </div>
+                      <button value='submit' name="submit" type="submit" class="btn btn-primary mr-2">Submit</button>
+                  </form>
             </div>
           </div>
         </div>

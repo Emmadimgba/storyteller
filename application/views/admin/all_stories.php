@@ -40,9 +40,14 @@
                           <th>
                             Is published
                           </th>
+                                      <?php
+            if ($this->ion_auth->is_admin())
+    {
+ ?>
                           <th>
                             Action
                           </th>
+                              <?php } ?>
                         </tr>
                       </thead>
                       <tbody>
@@ -77,6 +82,10 @@
                           <td>
                               <button type="button" class="btn <?php echo $row->is_published==0 ? 'btn-danger' : 'btn-success' ?> btn-sm"><?php echo $row->is_published==0 ? "Unpublished" :"published" ?></button>                           
                           </td>
+                                      <?php
+            if ($this->ion_auth->is_admin())
+    {
+ ?>
                           <td>
                              <div class="btn-group">
                       <button type="button" class="btn btn-primary">Action</button>
@@ -94,6 +103,7 @@
                       </div>
                     </div>
                           </td>
+                              <?php } ?>
                         </tr>
                         <?php  $i++; }  ?>
                       </tbody>

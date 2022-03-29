@@ -106,7 +106,7 @@ class Admin_model extends CI_Model {
         return $this->db->get();
     }
     
-    public function getStory($id){
+    public function getStoryByID($id){
         $this->db->select('story.id,story.title,story.short_description,story.content,story.is_published,story.image,location.location,category.categoryName,story.created_at,users.first_name,users.last_name')
          ->from('story')
          ->join('users', 'users.id = story.user_id')
@@ -115,6 +115,40 @@ class Admin_model extends CI_Model {
          ->where('story.id',$id);
         return $this->db->get();
     }
+    
+    
+    public function getStoryByLocation($id){
+        $this->db->select('story.id,story.title,story.short_description,story.content,story.is_published,story.image,location.location,category.categoryName,story.created_at,users.first_name,users.last_name')
+         ->from('story')
+         ->join('users', 'users.id = story.user_id')
+         ->join('location', 'story.location_id = location.id')
+         ->join('category', 'story.category_id = category.id')
+         ->where('story.location_id',$id)
+        ->where('story.is_published',1);
+        return $this->db->get();
+    }
+    
+    public function getStoryByCategory($id){
+        $this->db->select('story.id,story.title,story.short_description,story.content,story.is_published,story.image,location.location,category.categoryName,story.created_at,users.first_name,users.last_name')
+         ->from('story')
+         ->join('users', 'users.id = story.user_id')
+         ->join('location', 'story.location_id = location.id')
+         ->join('category', 'story.category_id = category.id')
+         ->where('story.category_id',$id)
+        ->where('story.is_published',1);
+        return $this->db->get();
+    }
+    
+        public function getStoryByUserID($id){
+        $this->db->select('story.id,story.title,story.short_description,story.content,story.is_published,story.image,location.location,category.categoryName,story.created_at,users.first_name,users.last_name')
+         ->from('story')
+         ->join('users', 'users.id = story.user_id')
+         ->join('location', 'story.location_id = location.id')
+         ->join('category', 'story.category_id = category.id')
+        ->where('users.id',$id);
+        return $this->db->get();
+    }
+    
     
     public function publish_story($id){
        $this->db->where('id', $id);

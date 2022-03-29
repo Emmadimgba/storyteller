@@ -47,11 +47,10 @@
                            foreach($locations as $locationsrow)
   {
                           ?>
-                          <li><a href="<?php echo $locationsrow->id ?>">- <?php echo $locationsrow->location ?></a></li>
+                          <li><a href="<?php echo base_url(); ?>home/index/location/<?php echo $locationsrow->id ?>">- <?php echo $locationsrow->location ?></a></li>
                           <?php
   }
                           ?>
-                        <li><a href="#">- Lorem ipsum dolor</a></li>
                        
                       </ul>
                     </div>
@@ -68,7 +67,7 @@
                            foreach($categories as $categoriesrow)
   {
                           ?>
-                          <li><a href="<?php echo $categoriesrow->id ?>">- <?php echo $categoriesrow->categoryName ?></a></li>
+                          <li><a href="<?php echo base_url(); ?>home/index/category/<?php echo $categoriesrow->id ?>">- <?php echo $locationsrow->location ?></a></li>
                           <?php
   }
                           ?>

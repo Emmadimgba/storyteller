@@ -24,7 +24,7 @@
                   <div class="card card-tale">
                     <div class="card-body">
                       <p class="mb-4">Story Tellers</p>
-                      <p class="fs-30 mb-2">4006</p>
+                      <p class="fs-30 mb-2">2</p>
                     </div>
                   </div>
                 </div>
@@ -32,7 +32,7 @@
                   <div class="card card-dark-blue">
                     <div class="card-body">
                       <p class="mb-4">Total Stories</p>
-                      <p class="fs-30 mb-2">61344</p>
+                      <p class="fs-30 mb-2">7</p>
                     </div>
                   </div>
                 </div>
@@ -42,7 +42,7 @@
                   <div class="card card-light-blue">
                     <div class="card-body">
                       <p class="mb-4">Published Stories</p>
-                      <p class="fs-30 mb-2">34040</p>
+                      <p class="fs-30 mb-2">4</p>
                     </div>
                   </div>
                 </div>
@@ -50,7 +50,7 @@
                   <div class="card card-light-danger">
                     <div class="card-body">
                       <p class="mb-4">Unpublished Stories</p>
-                      <p class="fs-30 mb-2">47033</p>
+                      <p class="fs-30 mb-2">3</p>
                     </div>
                   </div>
                 </div>

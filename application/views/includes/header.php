@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" rel="stylesheet">
 
-    <title>PHPJabbers.com | Free Blog Website Template</title>
+    <title>Story Telling App</title>
 
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url(); ?>assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,7 +38,7 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Story Teller<em>.</em></h2></a>
+          <a class="navbar-brand" href="i<?php echo base_url(); ?>"><h2>Story Teller<em>.</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -48,7 +48,17 @@
                   <a class="nav-link" href="<?php echo base_url(); ?>">Home
                   <span class="sr-only">(current)</span>
                 </a>
-              </li> 
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url(); ?>home/create_user">Register
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="<?php echo base_url(); ?>auth/login">Login
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
             </ul>
           </div>
         </div>
