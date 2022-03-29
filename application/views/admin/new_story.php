@@ -9,7 +9,7 @@
                  <?php if(isset($response)){ ?>
                <div class="alert alert-info" role="alert" id="infoMessage"><?php echo $response;?></div>
                 <?php } ?>
-                  <form method="post" action="<?php echo base_url() ?>Admin/new_story" class="forms-sample" enctype='multipart/form-data'>
+                  <form method="post" action="<?php echo base_url() ?>Secured/new_story" class="forms-sample" enctype='multipart/form-data'>
                     <div class="form-group">
                       <label for="">Title</label>
                       <input name="title" type="text"  class="form-control" id="exampleInputUsername1" placeholder="Title">

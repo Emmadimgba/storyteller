@@ -98,13 +98,13 @@ class Secured extends CI_Controller
         public function publish_story($id){
             $this->Admin_model->publish_story($id);
             $this->session->set_flashdata('message', 'Stroy has been published successfuly');
-            redirect('Admin/all_stories', 'refresh'); 
+            redirect('Secured/all_stories', 'refresh'); 
         }
         
         public function unpublish_story($id){
             $this->Admin_model->unpublish_story($id);
             $this->session->set_flashdata('message', 'Stroy has been unpublished successfuly');
-            redirect('Admin/all_stories', 'refresh');
+            redirect('Secured/all_stories', 'refresh');
         }
         
         

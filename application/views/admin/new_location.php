@@ -9,7 +9,7 @@
                   <?php if(isset($response)){ ?>
                <div class="alert alert-info" role="alert" id="infoMessage"><?php echo $response;?></div>
                 <?php } ?>
-               <form method="post" action="<?php echo base_url() ?>Admin/new_location" class="forms-sample">
+               <form method="post" action="<?php echo base_url() ?>Secured/new_location" class="forms-sample">
                     <div class="form-group">
                       <label for="exampleInputUsername1">Location Name</label>
                       <input type="text" name="location" required class="form-control" id="exampleInputUsername1" placeholder="Location Name">

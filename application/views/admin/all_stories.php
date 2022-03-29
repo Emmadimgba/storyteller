@@ -94,8 +94,8 @@
                       </button>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenuSplitButton1" style="">
                         <h6 class="dropdown-header">Action</h6>
-                        <a class="dropdown-item" href="<?php echo base_url() ?>Admin/publish_story/<?php echo $row->id ?>">Publish</a>
-                        <a class="dropdown-item" href="<?php echo base_url() ?>Admin/unpublish_story/<?php echo $row->id ?>">Unpublish</a>
+                        <a class="dropdown-item" href="<?php echo base_url() ?>Secured/publish_story/<?php echo $row->id ?>">Publish</a>
+                        <a class="dropdown-item" href="<?php echo base_url() ?>Secured/unpublish_story/<?php echo $row->id ?>">Unpublish</a>
                         <a class="dropdown-item" href="#">Edit</a>
                         <div class="dropdown-divider"></div>
                         <div class="dropdown-divider"></div>

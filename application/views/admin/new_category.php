@@ -9,7 +9,7 @@
                   <?php if(isset($response)){ ?>
                <div class="alert alert-info" role="alert" id="infoMessage"><?php echo $response;?></div>
                 <?php } ?>
-               <form method="post" action="<?php echo base_url() ?>Admin/new_category" class="forms-sample">
+               <form method="post" action="<?php echo base_url() ?>Secured/new_category" class="forms-sample">
                     <div class="form-group">
                       <label for="exampleInputUsername1">Category Name</label>
                       <input type="text" name="categoryName" required class="form-control" id="exampleInputUsername1" placeholder="Category Name">
