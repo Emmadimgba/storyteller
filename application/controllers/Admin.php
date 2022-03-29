@@ -66,13 +66,46 @@ class Admin extends CI_Controller
         public function new_story(){
             $this->data['locations']=$this->Admin_model->viewLocations();
             $this->data['categories']=$this->Admin_model->viewCategories();
+            if($this->input->post('submit') != NULL ){
+                
+                   $postData = $this->input->post();
+                   $config['upload_path'] = './uploads/';
+                   $config['allowed_types'] = 'gif|jpg|png';
+                   $config['max_size'] = '4000';
+                   $this->upload->initialize($config);
+                   if ( ! $this->upload->do_upload('image'))
+                    {
+                       $this->data['error'] = $this->upload->display_errors();
+                    }
+                    else
+                    {
+                        $postData['image'] = $this->upload->data()['file_name'];
+                        $this->data['response'] = $this->Admin_model->newStory($postData);
+                    }
+                   
+             }
             $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'new_story', $this->data);
         }
         
         
         public function all_stories(){
+            $this->data['stories']=$this->Admin_model->viewStory();
              $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'all_stories', $this->data);
         }
+        
+        
+        public function publish_story($id){
+            $this->Admin_model->publish_story($id);
+            $this->session->set_flashdata('message', 'Stroy has been published successfuly');
+            redirect('Admin/all_stories', 'refresh'); 
+        }
+        
+        public function unpublish_story($id){
+            $this->Admin_model->unpublish_story($id);
+            $this->session->set_flashdata('message', 'Stroy has been unpublished successfuly');
+            redirect('Admin/all_stories', 'refresh');
+        }
+        
         
         public function new_user(){
              $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'new_user', $this->data);

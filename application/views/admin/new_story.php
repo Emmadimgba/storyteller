@@ -6,8 +6,10 @@
               <div class="card">
                 <div class="card-body">
                   <h4 class="card-title">New Story</h4>
-                 
-                  <form method="post" action="" class="forms-sample">
+                 <?php if(isset($response)){ ?>
+               <div class="alert alert-info" role="alert" id="infoMessage"><?php echo $response;?></div>
+                <?php } ?>
+                  <form method="post" action="<?php echo base_url() ?>Admin/new_story" class="forms-sample" enctype='multipart/form-data'>
                     <div class="form-group">
                       <label for="">Title</label>
                       <input name="title" type="text"  class="form-control" id="exampleInputUsername1" placeholder="Title">

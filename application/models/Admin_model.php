@@ -86,4 +86,48 @@ class Admin_model extends CI_Model {
         return $response;
     }
     
+    
+    public function viewStory(){
+        $this->db->select('story.id,story.title,story.short_description,story.content,story.is_published,story.image,location.location,category.categoryName,story.created_at,users.first_name,users.last_name')
+         ->from('story')
+         ->join('users', 'users.id = story.user_id')
+         ->join('location', 'story.location_id = location.id')
+         ->join('category', 'story.category_id = category.id');
+        return $this->db->get();
+    }
+    
+    public function viewPublishedStory(){
+        $this->db->select('story.id,story.title,story.short_description,story.content,story.is_published,story.image,location.location,category.categoryName,story.created_at,users.first_name,users.last_name')
+         ->from('story')
+         ->join('users', 'users.id = story.user_id')
+         ->join('location', 'story.location_id = location.id')
+         ->join('category', 'story.category_id = category.id')
+         ->where('story.is_published',1);
+        return $this->db->get();
+    }
+    
+    public function getStory($id){
+        $this->db->select('story.id,story.title,story.short_description,story.content,story.is_published,story.image,location.location,category.categoryName,story.created_at,users.first_name,users.last_name')
+         ->from('story')
+         ->join('users', 'users.id = story.user_id')
+         ->join('location', 'story.location_id = location.id')
+         ->join('category', 'story.category_id = category.id')
+         ->where('story.id',$id);
+        return $this->db->get();
+    }
+    
+    public function publish_story($id){
+       $this->db->where('id', $id);
+       $this->db->update('story', array('is_published' => 1));
+       return true;
+    }
+        
+    
+    public function unpublish_story($id){
+       $this->db->where('id', $id);
+       $this->db->update('story', array('is_published' => 0));
+       return true;
+    }
+    
+    
 }

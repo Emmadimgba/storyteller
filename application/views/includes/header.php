@@ -45,18 +45,10 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home
+                  <a class="nav-link" href="<?php echo base_url(); ?>">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li> 
-              
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
             </ul>
           </div>
         </div>
