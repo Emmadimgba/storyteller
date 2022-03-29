@@ -16,18 +16,71 @@ class Admin extends CI_Controller
 		$this->load->library(['ion_auth', 'form_validation']);
 		$this->load->helper(['url', 'language']);
 		$this->lang->load('auth');
+                 $this->load->model('Admin_model');
+                 
+                
+            if (!$this->ion_auth->is_admin()){
+                show_error('You must be an administrator to view this page.');
+            }
 	}
         
         
         public function index()
 	{
-            if (!$this->ion_auth->is_admin()){
-                show_error('You must be an administrator to view this page.');
-            }
             
             $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'home', $this->data);
 
 	}
+        
+        public function new_category(){
+             if($this->input->post('submit') != NULL ){
+                
+                   $postData = $this->input->post();
+                   $this->data['response'] = $this->Admin_model->newCategory($postData);
+             }
+            
+             $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'new_category', $this->data);
+        }
+        
+        public function all_categories(){
+            $this->data['categories']=$this->Admin_model->viewCategories();
+            $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'all_categories', $this->data);
+        }
+        
+        
+        public function new_location(){
+             if($this->input->post('submit') != NULL ){
+                
+                   $postData = $this->input->post();
+                   $this->data['response'] = $this->Admin_model->newLocation($postData);
+             }
+            
+             $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'new_location', $this->data);
+        }
+        
+        public function all_location(){
+            $this->data['locations']=$this->Admin_model->viewLocations();
+            $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'all_location', $this->data);
+        }
+        
+        public function new_story(){
+            $this->data['locations']=$this->Admin_model->viewLocations();
+            $this->data['categories']=$this->Admin_model->viewCategories();
+            $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'new_story', $this->data);
+        }
+        
+        
+        public function all_stories(){
+             $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'all_stories', $this->data);
+        }
+        
+        public function new_user(){
+             $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'new_user', $this->data);
+        }
+        
+        public function view_users() {
+             $this->_render_page('admin' . DIRECTORY_SEPARATOR . 'view_users', $this->data);
+        }
         
         	/**
 	 * @param string     $view

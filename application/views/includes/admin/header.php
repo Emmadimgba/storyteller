@@ -65,9 +65,48 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
-              <i class="icon-grid menu-icon"></i>
+            <a class="nav-link" href="<?php echo base_url() ?>Admin/">
               <span class="menu-title">Dashboard</span>
+            </a>
+          </li>
+           <li class="nav-item">
+               <a class="nav-link" href="<?php echo base_url() ?>Admin/new_category">
+              <span class="menu-title">New Category</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url() ?>Admin/all_categories">
+              <span class="menu-title">View Category</span>
+            </a>
+          </li>
+           <li class="nav-item">
+               <a class="nav-link" href="<?php echo base_url() ?>Admin/new_location">
+              <span class="menu-title">New Location</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url() ?>Admin/all_location">
+              <span class="menu-title">View Locations</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url() ?>Admin/new_story">
+              <span class="menu-title">New Stories</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url() ?>Admin/all_stories">
+              <span class="menu-title">View Stories</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url() ?>Admin/new_user">
+              <span class="menu-title">New User</span>
+            </a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="<?php echo base_url() ?>Admin/view_users">
+              <span class="menu-title">View User</span>
             </a>
           </li>
         </ul>
@@ -79,8 +118,7 @@
             <div class="col-md-12 grid-margin">
               <div class="row">
                 <div class="col-12 col-xl-8 mb-4 mb-xl-0">
-                  <h3 class="font-weight-bold">Welcome Aamir</h3>
-                  <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
+                  <h3 class="font-weight-bold">Welcome <?php echo $this->ion_auth->user()->row()->first_name ?> <?php echo $this->ion_auth->user()->row()->last_name ?></h3>
                 </div>
               </div>
             </div>
