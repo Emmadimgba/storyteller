@@ -1,7 +1,7 @@
 
 ## Story Teller Application.
 
-![alt demo](https://alphatechsoftwaresolution.com/img/Screen-Recording-2022-03-31-at-1.gif?raw=true)
+![alt demo](https://github.com/Emmadimgba/storyteller/blob/284cc076d5adfed4d52f0b0be62b8aab721b5705/uploads/demo.png?raw=true)
 
 
 
