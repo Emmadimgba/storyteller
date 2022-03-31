@@ -13,7 +13,7 @@ Server side scripting Language: PHP (CodeIgniter framework)
 Frontend development stack: HTML, CSS(Bootstrap) and Javascript
 Database: Mysql
 
-Link to download video Demo: ``https://alphatechsoftwaresolution.com/img/Screen Recording 2022-03-31 at 1.37.36 AM.mov``
+Link to download video Demo: ``https://alphatechsoftwaresolution.com/img/Screen-Recording-2022-03-31-at-1.gif``
 
 1. [Installation Guide](#Installation Guide)
 
